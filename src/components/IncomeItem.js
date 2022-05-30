@@ -1,6 +1,6 @@
 import React from 'react';
 
-function IncomItem({ income, index, removeIncome }) {
+function IncomeItem({ income, index, removeIncome }) {
 
   let date = new Date(income.date);
 
@@ -18,4 +18,4 @@ function IncomItem({ income, index, removeIncome }) {
   )
 }
 
-export default IncomItem;
+export default IncomeItem;

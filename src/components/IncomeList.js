@@ -1,5 +1,5 @@
 import React from 'react';
-import IncomItem from './IncomItem';
+import IncomeItem from './IncomeItem';
 
 function IncomeList({ income, setIncome }) {
 
@@ -16,7 +16,7 @@ function IncomeList({ income, setIncome }) {
     <div className='income-list'>
         {
             income.sort(sortByDate).map((value, index) => (
-                <IncomItem 
+                <IncomeItem 
                     key={index} 
                     income={value} 
                     index={index} 
