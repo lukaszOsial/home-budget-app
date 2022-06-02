@@ -3,7 +3,7 @@ import React from 'react';
 function HeaderExpenses({totalExpenses}) {
   return (
     <header>
-        <h1>Wydatki</h1>
+        <h2>Wydatki</h2>
         <div className='total-expenses'>{totalExpenses}zł</div>
     </header>
   )

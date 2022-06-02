@@ -1,4 +1,5 @@
 import React from 'react';
+import {MdDeleteForever} from 'react-icons/md';
 
 function IncomeItem({ income, index, removeIncome }) {
 
@@ -10,7 +11,9 @@ function IncomeItem({ income, index, removeIncome }) {
 
   return (
     <div className='income-item'>
-        <button className='remove-item' onClick={() => removeHandle(index)}>x</button>
+        <button className='remove-item' onClick={() => removeHandle(index)}>
+          <MdDeleteForever size='1.6em' />
+        </button>
         <div className='desc'>{income.desc}</div>
         <div className='price'>{income.price}zł</div>
         <div className='date'>{date.toLocaleDateString()}</div>

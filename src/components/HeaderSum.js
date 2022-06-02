@@ -3,7 +3,7 @@ import React from 'react';
 function HeaderSum({totalSum}) {
   return (
     <header>
-        <h1>Saldo</h1>
+        <h2>Saldo</h2>
         <div className='total-sum'>{totalSum}zł</div>
     </header>
   )

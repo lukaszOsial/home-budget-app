@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import HeaderSum from './components/HeaderSum';
-import HeaderIncome from './components/HeaderIncome';
-import HeaderExpenses from './components/HeaderExpenses';
-import IncomeForm from "./components/IncomeForm";
-import IncomeList from "./components/IncomeList";
-import ExpensesForm from "./components/ExpensesForm";
-import ExpensesList from "./components/ExpensesList";
+import HeaderIncome from './components/Income/HeaderIncome';
+import HeaderExpenses from './components/Expenses/HeaderExpenses';
+import IncomeForm from "./components/Income/IncomeForm";
+import IncomeList from "./components/Income/IncomeList";
+import ExpensesForm from "./components/Expenses/ExpensesForm";
+import ExpensesList from "./components/Expenses/ExpensesList";
+import Footer from "./components/Footer";
 
 function App() {
   const [income, setIncome] = useState([]);
@@ -39,6 +40,7 @@ function App() {
   
   return (
     <div className="App">
+      <h1>Domowy budżet</h1>
       <HeaderSum totalSum={totalSum} />
       <HeaderIncome totalIncome={totalIncome} />
       <IncomeForm income={income} setIncome={setIncome} />
@@ -46,6 +48,7 @@ function App() {
       <HeaderExpenses totalExpenses={totalExpenses} />
       <ExpensesForm expenses={expenses} setExpenses={setExpenses} />
       <ExpensesList expenses={expenses} setExpenses={setExpenses} />
+      <Footer />
     </div>
   );
 }
