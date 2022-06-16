@@ -26,7 +26,7 @@ function ExpensesForm({expenses, setExpenses}) {
     <form className='expenses-form' onSubmit={AddExpense}>
         <div className='form-inner'>
             <input type='text' name='desc' id='desc' placeholder='Nazwa wydatku' ref={desc} required/>
-            <input type='number' name='price' id='price' placeholder='Cena' ref={price} required/>
+            <input type='number' name='price' id='price' placeholder='Kwota' ref={price} required/>
             <input type='date' name='date' id='date' placeholder='data wydatku' ref={date} required/>
             <input type='submit' value='Dodaj' />
         </div>

@@ -26,8 +26,8 @@ function IncomeForm({income, setIncome}) {
     <form className='income-form' onSubmit={AddIncome}>
         <div className='form-inner'>
             <input type='text' name='desc' id='desc' placeholder='Nazwa przychodu' ref={desc} required/>
-            <input type='number' name='price' id='price' placeholder='Cena' ref={price} required/>
-            <input type='date' name='date' id='date' placeholder='Income date...' ref={date} required/>
+            <input type='number' name='price' id='price' placeholder='Kwota' ref={price} required/>
+            <input type='date' name='date' id='date' placeholder='' ref={date} required/>
             <input type='submit' value='Dodaj' />
         </div>
     </form>

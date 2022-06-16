@@ -32,28 +32,26 @@ body {
 	min-height: calc(100vh);
 }
 header {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	column-gap: 150px;
+	grid-template-columns: 100px 50px;
 	padding: 15px;
 }
 h1 {
 	color: var(--dark);
-	font-size: 32px;
+	font-size: 40px;
 	font-weight: 700;
 	text-align: center;
+	margin-bottom: 10px;
 }
 h2 {
 	color: var(--dark);
 	font-size: 25px;
 	font-weight: 700;
-	text-align: left;
 }
 .total-income,.total-expenses,.total-sum {
 	font-size: 28px;
 	font-weight: 700;
-	background-color: var(--background-balance);
-	padding: 5px 20px;
-	border-radius: 8px;
 }
 .total-income {
 	color: rgb(11, 168, 11);
@@ -116,7 +114,6 @@ h2 {
 	background-position: 0%;
 	color: var(--dark);
 	font-weight: 700;
-	min-width: 90px;
 	transition: 0.4s;
 }
 .form-inner input[type="submit"]:hover {
@@ -178,4 +175,61 @@ h2 {
 }
 .footer img {
 	max-width: 250px;
+}
+@media (max-width: 790px){
+	.form-inner input{
+		width: 100%;
+	}
+	.form-inner input[type="submit"]{
+		max-width: 80px;
+	}
+}
+@media (max-width: 680px){
+	.form-inner input[type="number"]{
+		max-width: 90px;
+	}
+	.form-inner input[type="date"]{
+		max-width: 80px;
+	}
+	.form-inner{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.form-inner input[type="text"]{
+		border-radius: 8px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		max-width: 400px;
+	}
+	.form-inner input[type="number"],.form-inner input[type="date"],.form-inner input[type="submit"]{
+		display: inline-flex;
+		width: 100%;
+		margin-bottom: 10px;	
+		margin-right: 10px;
+		border-radius: 8px;
+	}
+	.income-form:after,.expenses-form:after{
+		background-image: none;
+	}
+	header{
+		justify-content: center;
+		column-gap: 100px;
+	}
+	.income-list .income-item,.expenses-list .expenses-item{
+		display: flex;
+		justify-content: center;
+	}
+	.income-list .income-item .price,
+	.income-list .income-item .date,
+	.expenses-list .expenses-item .price,
+	.expenses-list .expenses-item .date
+ 	{
+		min-width: 50px;
+	}
+	.income-list .income-item,.expenses-list .expenses-item{
+		padding-left: 55px;
+	}
+	.income-list .income-item .desc,.expenses-list .espenses-item .desc{
+		margin-right: 5px;
+	}
 }
