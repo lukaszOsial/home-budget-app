@@ -1,4 +1,4 @@
-# Home budget app
+# Home Budget App
 
 An online app to manage your home budget.
 ## Domain
