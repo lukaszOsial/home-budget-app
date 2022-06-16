@@ -1,4 +1,4 @@
-# My notes
+# Home budget app
 
 An online app to manage your home budget.
 ## Domain
